@@ -1,0 +1,48 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f7f7f7;
+}
+
+header {
+background: #d8c4b6;
+padding: 15px;
+color: #333;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav a {
+margin-left: 15px;
+text-decoration: none;
+color: #333;
+font-weight: bold;
+}
+
+.hero {
+padding: 60px;
+text-align: center;
+background: #e7dcd2;
+}
+
+.form-container {
+width: 350px;
+margin: 60px auto;
+padding: 20px;
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+}
+
+button {
+background: #d8c4b6;
+border: none;
+cursor: pointer;
+}
