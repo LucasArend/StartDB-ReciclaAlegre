@@ -16,5 +16,6 @@ public interface UsuarioMapper {
     @Mapping(target = "ativo", expression = "java(true)")
     @Mapping(target = "tipoUsuario", ignore = true)
     @Mapping(target = "authorities", ignore = true)
+    @Mapping(target = "perfil", ignore = true)
     Usuario toEntity(UsuarioRequestDTO dto);
 }
