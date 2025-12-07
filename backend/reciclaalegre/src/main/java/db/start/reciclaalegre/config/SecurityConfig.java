@@ -37,6 +37,7 @@ public class SecurityConfig {
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/usuarios").permitAll() //cadastro
                         .requestMatchers("/api/usuarios/**").authenticated()
+                        .requestMatchers("/api/solicitacoes").authenticated()
                         .anyRequest().authenticated()
                     )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)

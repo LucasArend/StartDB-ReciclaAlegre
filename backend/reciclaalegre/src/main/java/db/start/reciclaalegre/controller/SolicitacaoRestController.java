@@ -3,9 +3,11 @@ package db.start.reciclaalegre.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import db.start.reciclaalegre.dto.SolicitacaoRequestDto;
+import db.start.reciclaalegre.dto.SolicitacaoRequestDTO;
+import db.start.reciclaalegre.dto.SolicitacaoResponseDTO;
 import db.start.reciclaalegre.model.Usuario;
 import db.start.reciclaalegre.service.SolicitacaoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,11 +25,13 @@ public class SolicitacaoRestController {
         this.solicitacaoService = solicitacaoService;
     }
 
+    @SecurityRequirement(name = "bearer-key")
     @PostMapping
-    public ResponseEntity<?> criarSolicitacao(@RequestBody SolicitacaoRequestDto dto,
-            @AuthenticationPrincipal Usuario usuario) {
-                
-        return ResponseEntity.status(HttpStatus.CREATED).body(solicitacaoService.criarSolicitacao(dto, usuario.getEmail()));
+    public ResponseEntity<SolicitacaoResponseDTO> criarSolicitacao(@RequestBody SolicitacaoRequestDTO dto,
+        @AuthenticationPrincipal Usuario usuario) {
+
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(solicitacaoService.criarSolicitacao(dto, usuario.getEmail()));
     }
 
 }

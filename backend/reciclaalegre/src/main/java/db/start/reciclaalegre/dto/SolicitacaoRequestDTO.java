@@ -1,11 +1,11 @@
 package db.start.reciclaalegre.dto;
 
-import java.util.List;
+import java.util.Set;
 
 import db.start.reciclaalegre.model.Material;
 
-public record SolicitacaoRequestDto(
-    List<Material> materiais,
+public record SolicitacaoRequestDTO(
+    Set<Material> materiais,
     String descricao
 ) {
 
