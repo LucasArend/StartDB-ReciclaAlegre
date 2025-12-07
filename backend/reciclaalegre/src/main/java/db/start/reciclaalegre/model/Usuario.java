@@ -65,4 +65,10 @@ public class Usuario implements UserDetails {
         return this.email;
     }
 
+
+    @Override
+    public boolean isEnabled() {
+        return this.ativo;        
+    }
+
 }
