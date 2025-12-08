@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coleta · Reciclalegre</title>
 <link rel="stylesheet" href="../css/style.css">
-
-
 </head>
 
-<body class="coleta-body">
+<body>
 
-    <header class="coleta-hero">
-        <h1>Solicitar Coleta</h1>
-        <p>Escolha o tipo de material e envie seu pedido.</p>
-    </header>
+<header class="coleta-hero">
+    <h1>Solicitar Coleta</h1>
+    <p>Organize sua coleta de forma simples e rápida.</p>
 
-    <main class="coleta-container">
+   
+    <button id="toggle-theme" class="btn-theme" style="position:absolute; right:20px; top:20px;">🌙</button>
+</header>
 
+<section class="tipos-coleta fade">
 
-        <section class="tipos-coleta">
-            <div class="coleta-card">
-                <h3>📦 Papel e Papelão</h3>
-                <p>Jornais, caixas, folhas e documentos antigos.</p>
-            </div>
+    <div class="card">
+        <h3>Papel e Papelão</h3>
+        <p>Jornais, caixas e documentos.</p>
+    </div>
 
-            <div class="coleta-card">
-                <h3>🧴 Plásticos</h3>
-                <p>Garrafas PET, embalagens e tampas.</p>
-            </div>
+    <div class="card">
+        <h3>Plásticos</h3>
+        <p>Garrafas PET, embalagens e tampas.</p>
+    </div>
 
-            <div class="coleta-card">
-                <h3>🔋 Eletrônicos</h3>
-                <p>Pilhas, cabos, carregadores e pequenos dispositivos.</p>
-            </div>
-        </section>
+    <div class="card">
+        <h3>Eletrônicos</h3>
+        <p>Pilhas, carregadores e pequenos eletrônicos.</p>
+    </div>
 
-        <section class="form-coleta">
-            <h2>Enviar Solicitação</h2>
+</section>
 
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="text" placeholder="Endereço completo" required>
-                <input type="text" placeholder="Tipo de resíduo" required>
-                <textarea placeholder="Descreva o material" required></textarea>
+<section class="form-coleta fade">
 
-                <button class="btn-coleta">Enviar pedido</button>
-            </form>
-        </section>
+    <h2>Enviar Solicitação</h2>
 
-    </main>
+    <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="text" placeholder="Endereço completo" required>
+        <input type="text" placeholder="Tipo de resíduo" required>
+        <textarea placeholder="Descrição" rows="4" required></textarea>
 
+        <button>Enviar pedido</button>
+    </form>
+
+</section>
+
+<script src="../js/script.js"></script>
 </body>
 </html>

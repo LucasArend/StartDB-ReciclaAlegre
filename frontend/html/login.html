@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login · Reciclalegre</title>
 <link rel="stylesheet" href="../css/style.css">
-
-
 </head>
 
-<body class="login-body">
+<body class="center-full login-body">
 
-    <div class="login-card">
 
-        <div class="login-header">
-            <h2>Bem-vindo!</h2>
-            <p>Entre para continuar.</p>
-        </div>
+<button id="toggle-theme" class="btn-theme" style="position:absolute; right:20px; top:20px;">🌙</button>
 
-        <form class="login-form">
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
+<div class="auth-card fade">
 
-            <button class="btn-login">Entrar</button>
-        </form>
+    <h2>Bem-vindo!</h2>
+    <p>Entre para continuar.</p>
 
-        <p class="criar-conta">Não tem conta? <a href="cadastro.html">Criar conta</a></p>
+    <form class="login-form">
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
 
-    </div>
+        <button class="btn-login">Entrar</button>
+    </form>
 
+    <p>Não tem conta? <a href="cadastro.html">Criar conta</a></p>
+
+</div>
+
+<script src="../js/script.js"></script>
 </body>
 </html>
