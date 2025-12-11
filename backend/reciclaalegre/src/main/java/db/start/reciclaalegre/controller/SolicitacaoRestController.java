@@ -52,7 +52,6 @@ public class SolicitacaoRestController {
 
     @PostMapping("/requisitar/{id}")
     public ResponseEntity<?> requisitarColeta(@AuthenticationPrincipal Usuario usuario, @PathVariable Long id) {
-        System.out.println("SOLICITAR COLETA " + id);
         return ResponseEntity.ok(solicitacaoService.requisitarColeta(usuario.getEmail(), id));
     }
 
