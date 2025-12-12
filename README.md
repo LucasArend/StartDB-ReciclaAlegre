@@ -131,7 +131,7 @@ Caso deseje reportar um bug ou fazer uma sugestão para o projeto, nossa pagina 
 |[Desafios](https://github.com/MathPLopes/StartDB-ReciclaAlegre/wiki/desafios.md)          |Desafios e Aprendizados                |
 |[Backend](https://github.com/MathPLopes/StartDB-ReciclaAlegre/wiki/backend.md)            |Informações tecnicas extras do backend |
 |[Referências](https://github.com/MathPLopes/StartDB-ReciclaAlegre/wiki/referencias.md)    |Pagina com referências e agradecimentos|
-|[Testes](testes.md)                                                                       |Pagina sobre testes                    |
+|[Testes](https://github.com/MathPLopes/StartDB-ReciclaAlegre/wiki/testes.md)              |Pagina sobre testes                    |
 
 ---
 
