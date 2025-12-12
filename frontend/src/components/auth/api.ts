@@ -3,6 +3,7 @@ import type {
   UsuarioResponseDTO,
   SolicitacaoRequestDTO,
   SolicitacaoResponseDTO,
+  PerfilRequestDTO,
 } from "./AuthContext.types";
 
 const BASE_URL = "http://localhost:8080/api";
@@ -130,3 +131,30 @@ export async function carregarSolicitacoesPorUsuario(
     throw new Error("Não foi possível carregar solicitações do usuário");
   return res.json();
 }
+
+export async function atualizarPerfil(data: any, token: string) {
+  const res = await fetch(`http://localhost:8080/api/usuarios/atualizar`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(data),
+  });
+
+  const text = await res.text(); 
+  console.log("Status:", res.status);
+  console.log("Resposta do servidor:", text);
+
+  if (!res.ok) {
+    throw new Error(text || "Erro ao atualizar usuário");
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    return text;
+  }
+}
+
+

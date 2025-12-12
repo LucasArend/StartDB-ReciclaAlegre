@@ -21,6 +21,13 @@ export interface UsuarioRequestDTO {
     perfil: PerfilRequestDTO
 }
 
+export interface UsuarioUpdateDTO {
+  nome: string;
+  telefone: string;
+  senha: string; 
+  endereco: Endereco;
+}
+
 export interface PerfilResponseDTO {
     nome: string
     endereco: Endereco

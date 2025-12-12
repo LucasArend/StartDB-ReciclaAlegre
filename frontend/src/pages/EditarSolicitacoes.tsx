@@ -6,14 +6,12 @@ import {
 } from "../components/auth/api";
 import type { MaterialDTO, SolicitacaoRequestDTO } from "../components/auth/AuthContext.types";
 
-// --- Constantes e Helpers ---
 
 const tiposMaterial: MaterialDTO["tipoMaterial"][] = [
   "PAPEL", "PLASTICO", "METAL", "VIDRO", "MADEIRA",
   "ELETRONICO", "TECIDO", "OLEO", "ORGANICO", "OUTROS"
 ];
 
-// Lógica de envio (Peso -> Enum)
 const pesoParaQuantidade = (peso: number): MaterialDTO["quantidadeMaterial"] => {
   if (peso < 5) return "LEVE";
   if (peso < 15) return "MEDIO";
@@ -21,7 +19,6 @@ const pesoParaQuantidade = (peso: number): MaterialDTO["quantidadeMaterial"] => 
   return "MUITO_PESADO";
 };
 
-// Lógica reversa para Edição (Enum -> Peso Estimado visual)
 const quantidadeParaPesoEstimado = (qtd: string): number => {
   switch (qtd) {
     case "LEVE": return 4;

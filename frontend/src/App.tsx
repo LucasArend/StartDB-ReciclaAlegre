@@ -11,6 +11,7 @@ import Lista from "./pages/Lista"
 import AdicionarSolicitacao from "./pages/AdicionarSolicitacao"
 import EditarSolicitacao from "./pages/EditarSolicitacoes"
 import Perfil from "./pages/Perfil"
+import EditarPerfil from "./pages/EditarPerfil"
 
 export default function App() {
     return (
@@ -29,6 +30,8 @@ export default function App() {
                         <Route path="/AdicionarSolicitacao" element={<AdicionarSolicitacao />} />
                         <Route path="/EditarSolicitacao" element={<EditarSolicitacao />} />
                         <Route path="/Perfil" element={<Perfil />} />
+                        <Route path="/perfil/editar" element={<EditarPerfil />} />
+
                     </Route>
                   </Route>
               </Routes>
